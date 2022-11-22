@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 app.use(
   cors({
-    origin: "https://afridishes-frontend.onrender.com, *",
+    origin: "https://afridishes-frontend.onrender.com",
   })
 );
 app.use(express.json());
