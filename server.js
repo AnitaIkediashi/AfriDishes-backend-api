@@ -25,9 +25,9 @@ app.post("/checkout", async (req, res) => {
     line_items: lineItems,
     mode: "payment",
     success_url:
-      "https://afridishes-frontend.onrender.com/checkout-success?session_id={CHECKOUT_SESSION_ID}",
+      "https://afridishes-frontend.onrender.com/checkout-success",
     cancel_url:
-      "https://afridishes-frontend.onrender.com/checkout-cancel?session_id={CHECKOUT_SESSION_ID}",
+      "https://afridishes-frontend.onrender.com/checkout-cancel",
   });
 
   res.send(
