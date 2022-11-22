@@ -24,8 +24,10 @@ app.post("/checkout", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: "http://localhost:3000/checkout-success",
-    cancel_url: "http://localhost:3000/checkout-cancel",
+    success_url:
+      "https://afridishes-frontend.onrender.com/checkout-success?session_id={CHECKOUT_SESSION_ID}",
+    cancel_url:
+      "https://afridishes-frontend.onrender.com/checkout-cancel?session_id={CHECKOUT_SESSION_ID}",
   });
 
   res.send(
